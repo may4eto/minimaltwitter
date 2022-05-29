@@ -1,4 +1,16 @@
 <h1>Minimal Twitter</h1>
+<% if session[:token].present? %>
 <p>
-<a href="/auth/twitter">Log in with Twitter</a>
+    Hello, <%= session[:username] %>
 </p>
+<% @tweets.each do |tweet| %>
+    <div>
+        <h3><%= tweet.text %></h3>
+        <p><%= tweet.user.screen_name %></p>
+    </div>
+<% end %>
+<% else %>
+<p>
+    <%= link_to "Log in with Twitter", "/auth/twitter", method: :post %>
+</p>
+<% end %>
