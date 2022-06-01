@@ -69,3 +69,5 @@ gem 'twitter'
 # gem 'rinku'
 
 gem 'twitter-text'
+
+ruby "2.7.5"
