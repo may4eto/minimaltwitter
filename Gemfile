@@ -70,4 +70,4 @@ gem 'twitter'
 
 gem 'twitter-text'
 
-ruby "2.7.5"
+ruby "~>2.7.5"
