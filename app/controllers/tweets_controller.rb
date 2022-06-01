@@ -17,4 +17,8 @@ class TweetsController < ApplicationController
         session[:token_secret] = @response[:credentials][:secret]
         redirect_to "/"
     end
+    def logout
+        reset_session
+        redirect_to "/"
+    end
 end
